@@ -5,10 +5,20 @@ import SendCoin from 'components/SendCoin/SendCoin'
 import MetaCoin from 'contracts/MetaCoin.sol';
 import Web3 from 'web3';
 
+const Eth = require('ethjs');
+const eth = new Eth(new Eth.HttpProvider('https://ropsten.infura.io'));
+
+if (typeof window.web3 !== 'undefined' && typeof window.web3.currentProvider !== 'undefined') {
+  eth.setProvider(window.web3.currentProvider);
+} else {
+  eth.setProvider(provider); // set to TestRPC if not available
+}
 
 class AccountListContainer extends Component {
   constructor(props) {
     super(props)
+
+    this.web3js = new Web3(web3.currentProvider)
 
     this.state = {
       accounts: [],
@@ -16,7 +26,6 @@ class AccountListContainer extends Component {
     }
 
     this._getAccountBalance = this._getAccountBalance.bind(this)
-    this._getAccountBalances = this._getAccountBalances.bind(this)
   }
 
   componentWillMount(){
@@ -24,15 +33,12 @@ class AccountListContainer extends Component {
   }
 
   _getAccountBalance (account) {
-    var meta = MetaCoin.deployed()
-    return new Promise((resolve, reject) => {
-      meta.getBalance.call(account, {from: account}).then(function (value) {
-        resolve({ account: value.valueOf() })
-      }).catch(function (e) {
-        console.log(e)
-        reject()
-      })
+    var balance;
+    eth.getBalance(account, function(balanceError, balance){
+      balance = Eth.fromWei(balance, 'ether');
     })
+
+    return balance;
   }
 
   _getAccountBalances () {
