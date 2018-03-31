@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css?family=Karla');
+//@import url('https://fonts.googleapis.com/css?family=Cutive+Mono');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+@import "../../../node_modules/react-sticky-header/styles.css";
+
+$black: #111;
+$white: #FFF;
+$blue: #1E65F3;
+$purple: #6B32D8;
+$gray: #E5E5E5;
+$darkgray: #666;
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0 auto;
+	padding: 0;
+	border: 0;
+	font-size: 103%;
+    font-family: 'Karla', sans-serif;
+}
+
+.dashboardPanels {
+  background-color: #eee;
+}
+
+.bridgeExamples {
+
+}
+
+.Bridges-Grid {
+	padding: 0px;
+}
+
+.bridgePanels {
+	padding: 0px;
+}
+
+.navbar {
+    color: $white !important;
+}
+
+.navbar-brand {
+    font-weight: 550 !important;
+    font-size: 15 !important;
+    color: $black !important;
+    font-family: 'Karla', sans-serif;
+    &:hover {
+        color: $black !important;
+    }
+}
+
+.container {
+    //color: $white !important;
+}
+
+a {
+    color: $darkgray !important;
+    font-family: 'Source Code Pro', monospace;
+    &:hover {
+        color: $blue !important;
+        text-decoration: none !important;
+    }
+}
+
+h1 {
+    font-size: 300% !important;
+    font-weight: 600 !important;
+}
+
+.centered {
+    text-align: center;
+}
+
+.getstarted {
+    margin: 0 auto;
+    background-color: $purple !important;
+    font-size: 115% !important;
+    color: $white !important;
+}
+
+.newbtn{
+    text-align: right;
+    background-color: $purple !important;
+    font-size: 115% !important;
+    color: $white !important;
+}
+
+.google-btn {
+    margin: 25px;
+    width: 80%;
+    min-width: 240px;
+    max-width: 240px;
+    height: 42px;
+    background-color: #fcfcfc;
+    border-radius: 2px;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .2);
+    cursor: pointer;
+    cursor: hand;
+    align-self: center;
+    user-select: none;
+    transition: all 400ms ease 0s;
+    display: flex;
+}
+.google-btn .google-icon-wrapper {
+    position: absolute;
+    margin-top: 1px;
+    margin-left: 1px;
+    width: 40px;
+    height: 40px;
+    border-radius: 2px;
+    user-select: none
+}
+.google-btn .google-icon-svg {
+    position: absolute;
+    margin-top: 11px;
+    margin-left: 11px;
+    width: 18px;
+    height: 18px;
+    user-select: none
+}
+.google-btn .btn-text {
+    float: right;
+    margin: 11px 14px 40px 40px;
+    color: #757575;
+    font-size: 14px;
+    letter-spacing: .2px;
+    font-family: Roboto;
+    user-select: none
+}
+.google-btn:hover {
+    box-shadow: 0 3px 8px rgba(117, 117, 117, .5);
+    user-select: none
+}
+.google-btn:active {
+    box-shadow: 0 1px 1px #757575;
+    background: #F8F8F8;
+    color: #fff;
+    user-select: none
+}
+
+.normal-btn {
+    margin: 25px;
+    width: auto;
+    display: inline-block;
+    min-width: auto;
+    max-width: 184px;
+    height: 42px;
+    background-color: #fcfcfc;
+    border-radius: 2px;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .2);
+    cursor: pointer;
+    cursor: hand;
+    align-self: center;-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: all 400ms ease 0s;
+}
+.normal-btn .btn-text {
+    float: left;
+    margin: 11px 14px 11px 14px;
+    color: #757575;
+    font-size: 14px;
+    letter-spacing: .2px;
+    font-family: Roboto;
+    user-select: none
+}
+.normal-btn:hover {
+    box-shadow: 0 3px 8px rgba(117, 117, 117, .5);
+    user-select: none
+}
+.normal-btn:active {
+    box-shadow: 0 1px 1px #757575;
+    background: #F8F8F8;
+    color: #fff;
+    user-select: none
+}
